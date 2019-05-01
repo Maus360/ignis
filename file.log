@@ -875,3 +875,1327 @@ INFO 2019-05-01 16:31:13,800 views user (root) want to update nn (test)
 INFO 2019-05-01 16:31:13,860 basehttp "GET /nn/1/update HTTP/1.1" 200 2298
 WARNING 2019-05-01 16:31:13,964 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
 WARNING 2019-05-01 16:31:14,047 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 17:45:09,409 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:45:15,180 basehttp "GET / HTTP/1.1" 200 1331
+INFO 2019-05-01 17:45:15,180 basehttp "GET / HTTP/1.1" 200 1331
+WARNING 2019-05-01 17:45:15,556 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:45:15,689 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:45:15,738 log Not Found: /favicon.ico
+WARNING 2019-05-01 17:45:15,739 basehttp "GET /favicon.ico HTTP/1.1" 404 4388
+INFO 2019-05-01 17:45:20,978 basehttp "GET /nn/ HTTP/1.1" 200 1508
+WARNING 2019-05-01 17:45:21,090 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:45:21,172 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 17:45:23,707 basehttp "GET /nn/1 HTTP/1.1" 200 1668
+WARNING 2019-05-01 17:45:23,836 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:45:23,902 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 17:45:43,098 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 17:45:44,467 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 17:46:07,912 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+TypeError: get_meta_data() missing 1 required positional argument: 'nn'
+ERROR 2019-05-01 17:46:07,913 basehttp "GET /nn/1 HTTP/1.1" 500 87913
+INFO 2019-05-01 17:46:25,498 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 17:46:26,339 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 17:46:27,718 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data(dataset)
+TypeError: meta_data() takes 1 positional argument but 2 were given
+ERROR 2019-05-01 17:46:27,719 basehttp "GET /nn/1 HTTP/1.1" 500 85264
+INFO 2019-05-01 17:47:04,096 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 17:47:04,784 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:47:14,402 autoreload /home/maus/bsuir/kp/ignis/models.py changed, reloading.
+INFO 2019-05-01 17:47:15,022 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 17:47:26,289 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 63, in meta_data
+    resolver = NNResolver(self)
+TypeError: NNResolver() takes no arguments
+ERROR 2019-05-01 17:47:26,290 basehttp "GET /nn/1 HTTP/1.1" 500 87830
+INFO 2019-05-01 17:48:15,845 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:48:16,495 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:48:19,763 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 17:48:21,623 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 63, in meta_data
+    resolver = NNResolver(self)
+TypeError: NNResolver() takes no arguments
+ERROR 2019-05-01 17:48:21,624 basehttp "GET /nn/1 HTTP/1.1" 500 87830
+INFO 2019-05-01 17:49:13,326 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:49:14,643 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:49:16,960 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:49:17,668 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:49:26,249 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:49:26,873 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:49:30,971 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 17:49:31,051 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:49:31,524 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 17:49:43,812 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:49:44,440 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:49:45,366 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 17:49:45,416 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:49:45,612 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 17:51:14,419 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:51:14,814 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:51:39,065 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:52:25,562 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:52:26,137 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:52:28,535 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 17:52:28,647 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 17:52:28,733 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 17:53:05,092 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:53:05,740 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:53:15,384 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:53:15,736 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:53:20,916 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:53:21,505 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:53:35,334 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:53:36,026 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:53:43,605 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:53:44,001 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:53:47,166 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:53:47,512 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:54:00,755 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:54:01,074 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:54:08,262 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:54:08,576 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:54:17,786 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:54:18,356 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 17:54:31,104 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 17:54:31,588 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:00:44,536 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:00:52,040 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:00:55,080 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:00:55,440 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:01:12,706 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:01:13,298 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:11:53,851 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:11:59,121 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:11:59,312 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:11:59,410 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:11:59,458 log Not Found: /favicon.ico
+WARNING 2019-05-01 18:11:59,458 basehttp "GET /favicon.ico HTTP/1.1" 404 4388
+INFO 2019-05-01 18:12:29,803 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:12:30,534 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:12:33,220 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 55, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:12:33,315 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 51, in get_meta_data
+    result = self.run()
+TypeError: run() takes 0 positional arguments but 1 was given
+ERROR 2019-05-01 18:12:33,316 basehttp "GET /nn/1 HTTP/1.1" 500 91357
+INFO 2019-05-01 18:12:43,446 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:12:44,148 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:12:46,873 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 55, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:12:46,920 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 51, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 76, in run
+    args, preexec_fn=demote(user_uid, user_gid), cwd=cwd, env=env
+NameError: name 'demote' is not defined
+ERROR 2019-05-01 18:12:46,921 basehttp "GET /nn/1 HTTP/1.1" 500 101387
+INFO 2019-05-01 18:12:58,027 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:12:58,679 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:13:05,211 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:13:06,023 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:13:07,898 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:13:08,016 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 86, in run
+    args, preexec_fn=demote(user_uid, user_gid), cwd=cwd, env=env
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1522, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pipenv run python': 'pipenv run python'
+ERROR 2019-05-01 18:13:08,018 basehttp "GET /nn/1 HTTP/1.1" 500 134481
+INFO 2019-05-01 18:16:05,928 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:16:30,465 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:16:36,372 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:16:36,785 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 87, in run
+    args, preexec_fn=demote(user_uid, user_gid), cwd=cwd, env=env
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1522, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pipenv run python': 'pipenv run python'
+ERROR 2019-05-01 18:16:36,787 basehttp "GET /nn/1 HTTP/1.1" 500 134544
+WARNING 2019-05-01 18:16:37,027 log Not Found: /favicon.ico
+WARNING 2019-05-01 18:16:37,027 basehttp "GET /favicon.ico HTTP/1.1" 404 4388
+INFO 2019-05-01 18:17:09,542 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:17:10,872 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:17:10,940 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 93, in run
+    args, preexec_fn=demote(user_uid, user_gid), cwd=cwd, env=env
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1522, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pipenv run python': 'pipenv run python'
+ERROR 2019-05-01 18:17:10,941 basehttp "GET /nn/1 HTTP/1.1" 500 134425
+INFO 2019-05-01 18:17:22,320 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:17:22,990 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:17:39,917 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:17:40,559 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:18:53,365 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:18:53,429 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 88, in run
+    args, preexec_fn=demote(user_uid, user_gid), cwd=cwd, env=env
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1522, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pipenv run python': 'pipenv run python'
+ERROR 2019-05-01 18:18:53,431 basehttp "GET /nn/1 HTTP/1.1" 500 134581
+INFO 2019-05-01 18:20:38,929 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:20:39,605 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:20:49,244 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:20:49,883 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:21:00,616 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+INFO 2019-05-01 18:23:15,456 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:23:19,877 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+ERROR 2019-05-01 18:23:20,012 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 78, in run
+    process = subprocess.Popen("python " + self.name, shell=True, env=env)
+NameError: name 'env' is not defined
+ERROR 2019-05-01 18:23:20,013 basehttp "GET /nn/1 HTTP/1.1" 500 94888
+INFO 2019-05-01 18:23:27,225 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:23:27,888 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:23:29,970 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+INFO 2019-05-01 18:23:30,288 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:23:30,452 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:23:30,606 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:24:03,688 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:24:04,315 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:24:11,836 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:24:12,469 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:24:15,765 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 65, in prepare_sandbox
+    with open("sandboxes/" + self.filename, "w") as output:
+AttributeError: 'NNResolver' object has no attribute 'filename'
+INFO 2019-05-01 18:24:15,828 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:24:15,956 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:24:16,048 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:27:58,902 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:27:59,349 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:28:31,724 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:28:32,092 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:28:40,295 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:28:40,629 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:28:50,864 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:28:51,173 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:28:57,362 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:28:57,707 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:29:02,897 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:29:03,217 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:29:04,369 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:29:04,737 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:29:14,946 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:29:15,254 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:30:03,745 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:30:04,069 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:30:08,240 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:30:08,856 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:30:19,095 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 100, in run
+    "result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:30:19,096 basehttp "GET /nn/1 HTTP/1.1" 500 107192
+WARNING 2019-05-01 18:30:19,332 log Not Found: /favicon.ico
+WARNING 2019-05-01 18:30:19,334 basehttp "GET /favicon.ico HTTP/1.1" 404 4388
+INFO 2019-05-01 18:30:44,579 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:30:45,282 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:30:50,725 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:30:51,402 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:31:10,886 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/engine/tool.py", line 69, in prepare_sandbox
+    self.name,
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/os.py", line 221, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/maus/bsuir/kp/sandboxes/test2019-05-01 16:18:23+00:00'
+ERROR 2019-05-01 18:31:10,994 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 100, in run
+    "result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:31:10,996 basehttp "GET /nn/1 HTTP/1.1" 500 107195
+ERROR 2019-05-01 18:31:26,334 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 100, in run
+    "result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:31:26,335 basehttp "GET /nn/1 HTTP/1.1" 500 107195
+INFO 2019-05-01 18:31:42,792 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:31:43,528 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:32:10,856 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:32:11,241 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:32:21,460 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:32:22,048 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:32:24,924 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 101, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:32:24,925 basehttp "GET /nn/1 HTTP/1.1" 500 107151
+INFO 2019-05-01 18:32:40,090 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:32:40,727 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:32:43,839 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 102, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:32:43,840 basehttp "GET /nn/1 HTTP/1.1" 500 107151
+INFO 2019-05-01 18:33:41,570 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:33:42,274 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:33:50,241 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 102, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:33:50,242 basehttp "GET /nn/1 HTTP/1.1" 500 107151
+INFO 2019-05-01 18:35:06,081 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:35:06,443 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:35:09,604 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:35:10,190 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:35:18,877 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 110, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:35:18,878 basehttp "GET /nn/1 HTTP/1.1" 500 107152
+INFO 2019-05-01 18:35:54,252 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:35:54,937 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:35:55,721 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 110, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:35:55,722 basehttp "GET /nn/1 HTTP/1.1" 500 107152
+INFO 2019-05-01 18:36:10,826 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:36:11,490 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:36:16,935 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:36:17,551 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:36:18,730 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 110, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:36:18,734 basehttp "GET /nn/1 HTTP/1.1" 500 107152
+INFO 2019-05-01 18:36:53,286 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:36:53,670 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:36:57,848 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:36:58,166 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:37:09,385 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:37:09,958 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:37:18,542 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 114, in run
+    "/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:37:18,546 basehttp "GET /nn/1 HTTP/1.1" 500 107152
+INFO 2019-05-01 18:38:38,866 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:38:39,566 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:38:53,340 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:38:53,715 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:38:55,885 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:38:56,460 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:39:03,249 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 98, in run
+    stdout="/result.txt",
+  File "/usr/lib/python3.7/subprocess.py", line 728, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "/usr/lib/python3.7/subprocess.py", line 1359, in _get_handles
+    c2pwrite = stdout.fileno()
+AttributeError: 'str' object has no attribute 'fileno'
+ERROR 2019-05-01 18:39:03,251 basehttp "GET /nn/1 HTTP/1.1" 500 107120
+INFO 2019-05-01 18:39:45,706 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:39:46,326 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:40:07,389 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:40:08,005 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:40:15,114 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 102, in run
+    "rb",
+FileNotFoundError: [Errno 2] No such file or directory: '/result.txt'
+ERROR 2019-05-01 18:40:15,115 basehttp "GET /nn/1 HTTP/1.1" 500 95411
+INFO 2019-05-01 18:40:51,058 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:40:51,445 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:40:57,620 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:40:57,952 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:41:09,163 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:41:09,733 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:41:19,341 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:41:19,988 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:41:21,919 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 101, in run
+    with open(putput_file_path, "rb") as output:
+NameError: name 'putput_file_path' is not defined
+ERROR 2019-05-01 18:41:21,920 basehttp "GET /nn/1 HTTP/1.1" 500 95991
+INFO 2019-05-01 18:41:53,646 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:41:54,257 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:41:56,330 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 101, in run
+    with open(output_file_path, "rb") as output:
+FileNotFoundError: [Errno 2] No such file or directory: '/result.txt'
+ERROR 2019-05-01 18:41:56,331 basehttp "GET /nn/1 HTTP/1.1" 500 96055
+INFO 2019-05-01 18:42:21,722 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:42:22,363 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:42:24,941 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 102, in run
+    with open(output_file_path, "rb") as output:
+FileNotFoundError: [Errno 2] No such file or directory: '/result.txt'
+ERROR 2019-05-01 18:42:24,942 basehttp "GET /nn/1 HTTP/1.1" 500 96000
+INFO 2019-05-01 18:42:57,017 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:42:57,677 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:43:01,032 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:43:01,653 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:43:02,717 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 61, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 102, in run
+    with open(output_file_path, "rb") as output:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/maus/bsuir/kp/sandboxes/test2019-05-01 16:18:23+00:00/result.txt'
+ERROR 2019-05-01 18:43:02,718 basehttp "GET /nn/1 HTTP/1.1" 500 96234
+INFO 2019-05-01 18:43:44,686 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:43:45,343 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:45:23,639 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:45:24,312 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:45:28,708 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:45:29,413 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:45:38,070 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:45:38,732 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:45:45,456 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:45:45,567 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:45:45,748 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:46:11,978 views user (root) want to update nn (test)
+INFO 2019-05-01 18:46:12,351 basehttp "GET /nn/1/update HTTP/1.1" 200 2298
+WARNING 2019-05-01 18:46:12,542 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:46:12,647 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:46:56,561 basehttp "POST /nn/1/update HTTP/1.1" 302 0
+INFO 2019-05-01 18:46:56,807 basehttp "GET /nn/ HTTP/1.1" 200 1508
+WARNING 2019-05-01 18:46:56,954 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:46:57,004 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:46:58,954 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:46:59,076 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:46:59,138 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:47:41,889 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:47:42,596 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:47:58,461 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:47:59,139 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:48:03,201 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:48:03,311 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:48:03,396 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:48:08,974 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:48:10,320 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:48:10,426 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:48:10,532 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:48:31,250 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:48:31,663 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:48:36,845 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:48:37,413 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:48:40,656 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:48:40,746 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:48:40,872 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:49:52,757 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:49:53,412 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:49:55,761 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:49:56,395 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:50:00,120 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:50:00,227 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:50:00,331 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:50:05,788 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:50:05,909 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:50:06,022 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:50:37,418 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:50:38,077 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:50:50,789 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:50:51,447 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:50:53,874 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:50:53,954 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:50:54,057 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:50:56,406 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:50:56,509 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:50:56,623 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:52:02,852 views user (root) want to update nn (test)
+INFO 2019-05-01 18:52:02,867 basehttp "GET /nn/1/update HTTP/1.1" 200 2357
+WARNING 2019-05-01 18:52:03,004 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:52:03,067 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:52:17,298 basehttp "POST /nn/1/update HTTP/1.1" 302 0
+INFO 2019-05-01 18:52:17,347 basehttp "GET /nn/ HTTP/1.1" 200 1508
+WARNING 2019-05-01 18:52:17,477 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:52:17,541 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:52:19,725 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:52:19,837 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:52:19,908 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:53:06,115 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:53:06,809 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:53:33,279 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:53:33,927 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:54:21,054 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:55:13,777 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:55:14,531 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 18:55:23,412 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 63, in meta_data
+    resolver = NNResolver(self)
+  File "/home/maus/bsuir/kp/engine/tool.py", line 57, in __init__
+    self.name = str(self.nn) + str(datetime.datetime.timestamp(self.nn.date))
+NameError: name 'datetime' is not defined
+ERROR 2019-05-01 18:55:23,413 basehttp "GET /nn/1 HTTP/1.1" 500 91485
+INFO 2019-05-01 18:55:39,902 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:55:40,551 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:55:43,025 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:55:43,128 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:55:43,288 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:56:26,667 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:56:27,312 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:56:41,082 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:56:41,759 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:56:46,399 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:56:46,479 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:56:46,569 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:57:17,604 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:57:18,024 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:57:22,204 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:57:22,796 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:58:01,594 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:58:02,401 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:58:14,123 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:58:14,740 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:58:15,860 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:58:15,954 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:58:16,072 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:58:52,585 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:58:53,323 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:58:57,736 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:58:58,476 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:59:00,805 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:59:01,466 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:59:02,729 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:59:03,380 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:59:06,932 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:59:07,013 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:59:07,100 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 18:59:19,288 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 18:59:19,954 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 18:59:21,410 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 18:59:21,463 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 18:59:21,567 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:00:24,779 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:00:25,549 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:00:27,868 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:00:28,488 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:01:27,231 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:01:28,742 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:01:37,395 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:01:37,519 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:01:37,647 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:02:23,284 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:02:23,677 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:02:26,839 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:02:27,470 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:02:32,685 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:02:32,774 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:02:33,325 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:02:47,640 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:02:48,259 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:02:51,526 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:02:51,607 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:02:51,703 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:03:13,732 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:03:14,440 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:03:17,303 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:03:17,361 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:03:17,463 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:03:22,584 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:03:22,663 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:03:22,746 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:04:21,374 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:04:22,052 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:04:32,790 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:04:33,451 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:04:41,000 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:04:41,610 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:04:46,943 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:04:47,058 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:04:47,191 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:08:34,463 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 19:08:39,047 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 63, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 124, in run
+    stdout=output,
+  File "/usr/lib/python3.7/subprocess.py", line 323, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1523, in _execute_child
+    raise child_exception_type(err_msg)
+subprocess.SubprocessError: Exception occurred in preexec_fn.
+ERROR 2019-05-01 19:08:39,050 basehttp "GET /nn/1 HTTP/1.1" 500 118393
+INFO 2019-05-01 19:10:59,611 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:11:00,273 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:11:08,827 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:11:09,494 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:11:19,139 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:11:19,735 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 19:11:21,543 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 63, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 124, in run
+    stdout=output,
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1523, in _execute_child
+    raise child_exception_type(err_msg)
+subprocess.SubprocessError: Exception occurred in preexec_fn.
+ERROR 2019-05-01 19:11:21,545 basehttp "GET /nn/1 HTTP/1.1" 500 114197
+INFO 2019-05-01 19:13:29,212 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:13:29,909 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 19:13:33,009 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 63, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 124, in run
+    stdout=output,
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1523, in _execute_child
+    raise child_exception_type(err_msg)
+subprocess.SubprocessError: Exception occurred in preexec_fn.
+ERROR 2019-05-01 19:13:33,010 basehttp "GET /nn/1 HTTP/1.1" 500 114197
+INFO 2019-05-01 19:13:42,780 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:13:43,445 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 19:13:47,835 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 63, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 124, in run
+    stdout=output,
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1523, in _execute_child
+    raise child_exception_type(err_msg)
+subprocess.SubprocessError: Exception occurred in preexec_fn.
+ERROR 2019-05-01 19:13:47,839 basehttp "GET /nn/1 HTTP/1.1" 500 114196
+INFO 2019-05-01 19:17:02,688 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 19:17:06,662 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 63, in get_meta_data
+    result = self.run()
+  File "/home/maus/bsuir/kp/engine/tool.py", line 124, in run
+    stdout=output,
+  File "/usr/lib/python3.7/subprocess.py", line 775, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib/python3.7/subprocess.py", line 1523, in _execute_child
+    raise child_exception_type(err_msg)
+subprocess.SubprocessError: Exception occurred in preexec_fn.
+ERROR 2019-05-01 19:17:06,664 basehttp "GET /nn/1 HTTP/1.1" 500 114336
+WARNING 2019-05-01 19:17:06,909 log Not Found: /favicon.ico
+WARNING 2019-05-01 19:17:06,909 basehttp "GET /favicon.ico HTTP/1.1" 404 4388
+INFO 2019-05-01 19:17:18,721 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:17:19,453 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:17:20,568 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:17:20,692 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:17:20,862 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:17:43,657 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:17:44,388 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:17:48,358 basehttp "GET /nn/1 HTTP/1.1" 200 1667
+WARNING 2019-05-01 19:17:48,463 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:17:48,556 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:18:35,750 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:18:36,489 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:18:47,182 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:18:47,893 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:18:52,276 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:18:52,960 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:18:57,372 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:18:58,056 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:19:06,621 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:19:07,241 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:19:40,913 autoreload /home/maus/bsuir/kp/engine/tool.py changed, reloading.
+INFO 2019-05-01 19:19:41,587 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:20:05,849 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 19:20:06,553 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:20:08,893 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 19:20:09,555 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:20:43,717 basehttp "GET /nn/1 HTTP/1.1" 200 1716
+WARNING 2019-05-01 19:20:43,817 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:20:43,939 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 19:21:20,886 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 19:21:21,539 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 19:21:23,100 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/ignis/views.py", line 179, in get_context_data
+    context["result"] = meta_data.decode("utf-8")
+AttributeError: 'list' object has no attribute 'decode'
+ERROR 2019-05-01 19:21:23,103 basehttp "GET /nn/1 HTTP/1.1" 500 85544
+INFO 2019-05-01 19:21:37,491 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 19:21:38,133 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:21:45,687 autoreload /home/maus/bsuir/kp/ignis/views.py changed, reloading.
+INFO 2019-05-01 19:21:46,298 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 19:22:06,636 basehttp "GET /nn/1 HTTP/1.1" 200 1702
+WARNING 2019-05-01 19:22:06,732 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 19:22:06,814 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767

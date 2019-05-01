@@ -60,5 +60,5 @@ class NN(models.Model):
         return self.name
 
     def meta_data(self):
-        resolver = NNResolver()
+        resolver = NNResolver(self)
         return resolver.get_meta_data()

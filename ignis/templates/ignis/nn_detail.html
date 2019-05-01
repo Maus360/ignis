@@ -8,8 +8,9 @@
 <a href="{% url 'nn-update' nn.id %}">Update </a>
 {% endif %}
 <p><strong>Post date:</strong> {{ nn.date }}</p>
-<p><strong>Author:</strong> {{ nn.owner }}</p>
+<p><strong>Owner:</strong> {{ nn.owner }}</p>
 <p><strong>Dataset:</strong> <a href="{% url 'dataset-detail' nn.dataset.id %}"> {{ nn.dataset }} </a></p>
+<p><strong>Result:</strong> {{ result }}</p>
 
 
 <!-- <p><strong>Description:</strong></p>

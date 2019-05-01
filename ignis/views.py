@@ -175,7 +175,8 @@ class NNDetailView(generic.DetailView):
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         dataset = self.get_queryset().first()
-        # meta_data = dataset.meta_data()
+        meta_data = dataset.meta_data()
+        context["result"] = meta_data[0].decode("utf-8")
         # print(meta_data)
         # if meta_data["valid"]:
         #     for key, value in meta_data.items():
