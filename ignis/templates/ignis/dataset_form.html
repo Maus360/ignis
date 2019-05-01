@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Edit dataset {{ dataset.name }}</h2>
+
+<div class="form" enctype="multipart/form-data">
+    {% autoescape off %}
+    <form action="{% url 'dataset-update' dataset.id %}" method="POST">
+        {% endautoescape %}
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <BR>
+        <input type="submit" value="Submit Changes" />
+    </form>
+</div>
+
+
+{% endblock %}

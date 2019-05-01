@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>All nueral networks</h1>
+{% if user.is_authenticated %}
+<a href="{% url 'nn-create' %}">Upload</a></p>
+{%endif%}
+{% if nn_list %}
+<ul>
+
+    {% for nn in nn_list %}
+    {% if nn.sharing or nn.owner == user %}
+    <li>
+        <a href="{{ nn.get_absolute_url }}">{{ nn.name }}</a> ({{nn.date}}) — {{ nn.owner }}
+    </li>
+    {% endif %}
+    {% endfor %}
+
+</ul>
+
+{% else %}
+<p>There are no blogs.</p>
+{% endif %}
+{% endblock %}

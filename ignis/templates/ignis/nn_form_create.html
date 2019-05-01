@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Create Nueral network </h2>
+
+<div class="form">
+    {% autoescape off %}
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        {% endautoescape %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+</div>
+
+
+{% endblock %}

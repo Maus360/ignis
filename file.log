@@ -1,0 +1,877 @@
+ERROR 2019-05-01 14:17:19,831 tool Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+INFO 2019-05-01 14:17:19,842 basehttp "GET /dataset/19 HTTP/1.1" 200 1712
+WARNING 2019-05-01 14:17:19,947 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:17:20,057 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:17:42,106 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:17:42,708 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:17:44,595 tool <built-in method with_traceback of ParserError object at 0x7fec3edd5fa8>
+INFO 2019-05-01 14:17:44,612 basehttp "GET /dataset/19 HTTP/1.1" 200 1712
+WARNING 2019-05-01 14:17:44,708 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:17:44,843 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:17:53,406 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:17:54,025 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:17:59,130 log Internal Server Error: /dataset/19
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 22, in is_valid
+    self.df = pd.read_csv(str(self.file))
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 702, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 435, in _read
+    data = parser.read(nrows)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 1139, in read
+    ret = self._engine.read(nrows)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 1995, in read
+    data = self._reader.read(nrows)
+  File "pandas/_libs/parsers.pyx", line 899, in pandas._libs.parsers.TextReader.read
+  File "pandas/_libs/parsers.pyx", line 914, in pandas._libs.parsers.TextReader._read_low_memory
+  File "pandas/_libs/parsers.pyx", line 968, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 955, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 2172, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 53, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 35, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 13, in get_meta_data
+    if self.is_valid() == False:
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 25, in is_valid
+    logger.error(e.with_traceback())
+TypeError: with_traceback() takes exactly one argument (0 given)
+ERROR 2019-05-01 14:17:59,131 basehttp "GET /dataset/19 HTTP/1.1" 500 191113
+INFO 2019-05-01 14:18:44,391 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:18:45,039 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:18:48,413 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:18:49,013 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:18:54,461 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:18:55,114 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:18:58,485 tool error
+Traceback (most recent call last):
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 22, in is_valid
+    self.df = pd.read_csv(str(self.file))
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 702, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 435, in _read
+    data = parser.read(nrows)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 1139, in read
+    ret = self._engine.read(nrows)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/io/parsers.py", line 1995, in read
+    data = self._reader.read(nrows)
+  File "pandas/_libs/parsers.pyx", line 899, in pandas._libs.parsers.TextReader.read
+  File "pandas/_libs/parsers.pyx", line 914, in pandas._libs.parsers.TextReader._read_low_memory
+  File "pandas/_libs/parsers.pyx", line 968, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 955, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 2172, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+INFO 2019-05-01 14:18:58,508 basehttp "GET /dataset/19 HTTP/1.1" 200 1712
+WARNING 2019-05-01 14:18:58,654 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:18:58,736 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:19:18,689 basehttp "GET /dataset/ HTTP/1.1" 200 1621
+WARNING 2019-05-01 14:19:18,822 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:19:18,942 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:19:20,307 basehttp "GET /dataset/create HTTP/1.1" 200 1948
+WARNING 2019-05-01 14:19:20,420 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:19:20,533 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:19:26,347 basehttp "POST /dataset/create HTTP/1.1" 302 0
+INFO 2019-05-01 14:19:26,408 basehttp "GET /dataset/ HTTP/1.1" 200 1729
+WARNING 2019-05-01 14:19:26,574 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:19:26,677 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:19:28,337 basehttp "GET /dataset/21 HTTP/1.1" 200 1647
+WARNING 2019-05-01 14:19:28,490 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:19:28,658 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:20:20,896 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:20:21,521 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:20:24,323 log Internal Server Error: /dataset/21
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 53, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 35, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 15, in get_meta_data
+    return {"valid": self.is_valid(), "range": self.get_range()}
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 18, in get_range
+    return "x".join(self.df.shape)
+TypeError: sequence item 0: expected str instance, int found
+ERROR 2019-05-01 14:20:24,324 basehttp "GET /dataset/21 HTTP/1.1" 500 96722
+INFO 2019-05-01 14:20:41,658 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:20:42,315 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:20:43,943 basehttp "GET /dataset/21 HTTP/1.1" 200 1647
+WARNING 2019-05-01 14:20:44,060 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:20:44,270 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:20:54,024 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:20:54,640 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:21:37,552 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 14:21:38,154 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:22:18,969 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 14:22:19,602 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:22:44,861 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 14:22:45,504 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:24:03,820 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 14:24:04,436 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:24:09,886 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 14:24:10,519 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:24:22,950 log Internal Server Error: /dataset/21
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 56, in get_context_data
+    for key, value in meta_data.items:
+TypeError: 'builtin_function_or_method' object is not iterable
+ERROR 2019-05-01 14:24:22,951 basehttp "GET /dataset/21 HTTP/1.1" 500 87341
+WARNING 2019-05-01 14:24:23,184 log Not Found: /favicon.ico
+WARNING 2019-05-01 14:24:23,184 basehttp "GET /favicon.ico HTTP/1.1" 404 3488
+INFO 2019-05-01 14:24:30,770 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:24:31,905 log Internal Server Error: /dataset/21
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 56, in get_context_data
+    for key, value in meta_data.items:
+TypeError: 'builtin_function_or_method' object is not iterable
+ERROR 2019-05-01 14:24:31,907 basehttp "GET /dataset/21 HTTP/1.1" 500 87341
+INFO 2019-05-01 14:24:49,856 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 14:24:50,455 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:24:51,525 basehttp "GET /dataset/21 HTTP/1.1" 200 1688
+WARNING 2019-05-01 14:24:51,654 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:24:51,799 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:25:56,448 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:25:58,007 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:26:24,300 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:26:24,931 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:26:44,494 basehttp "GET /dataset/21 HTTP/1.1" 200 1910
+WARNING 2019-05-01 14:26:44,628 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:26:44,714 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:27:31,846 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:27:32,476 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:27:35,303 log Internal Server Error: /dataset/21
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 53, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 35, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 18, in get_meta_data
+    "types": self.get_existing_types(),
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 25, in get_existing_types
+    return "\n".join(self.df.dtypes)
+TypeError: sequence item 0: expected str instance, numpy.dtype found
+ERROR 2019-05-01 14:27:35,304 basehttp "GET /dataset/21 HTTP/1.1" 500 96784
+INFO 2019-05-01 14:27:48,419 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:27:49,120 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:27:49,821 basehttp "GET /dataset/21 HTTP/1.1" 200 1780
+WARNING 2019-05-01 14:27:49,936 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:27:50,018 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:27:55,716 basehttp "GET /dataset/21 HTTP/1.1" 200 1780
+WARNING 2019-05-01 14:27:55,815 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:27:55,901 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:28:01,885 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:28:02,511 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:28:55,922 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:28:56,542 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:28:59,800 basehttp "GET /dataset/21 HTTP/1.1" 200 1910
+WARNING 2019-05-01 14:28:59,919 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:29:00,031 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:30:22,208 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:30:22,862 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 14:30:25,092 log Internal Server Error: /dataset/21
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 53, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 35, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 18, in get_meta_data
+    "types": self.get_existing_types(),
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 25, in get_existing_types
+    print(self.df.dtypes.split())
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/core/generic.py", line 5067, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'Series' object has no attribute 'split'
+ERROR 2019-05-01 14:30:25,094 basehttp "GET /dataset/21 HTTP/1.1" 500 100949
+ERROR 2019-05-01 14:30:28,065 log Internal Server Error: /dataset/21
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 53, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 35, in meta_data
+    return resolver.get_meta_data()
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 18, in get_meta_data
+    "types": self.get_existing_types(),
+  File "/home/maus/bsuir/kp/mysite/engine/tool.py", line 25, in get_existing_types
+    print(self.df.dtypes.split())
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/pandas/core/generic.py", line 5067, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'Series' object has no attribute 'split'
+ERROR 2019-05-01 14:30:28,066 basehttp "GET /dataset/21 HTTP/1.1" 500 100949
+INFO 2019-05-01 14:30:38,850 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:30:39,455 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:30:41,771 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:30:42,423 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:30:42,652 basehttp "GET /dataset/21 HTTP/1.1" 200 1910
+WARNING 2019-05-01 14:30:42,777 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:30:42,874 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:31:21,189 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:31:21,895 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:31:23,749 basehttp "GET /dataset/21 HTTP/1.1" 200 1910
+WARNING 2019-05-01 14:31:23,865 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:31:23,950 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:31:55,531 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:31:56,167 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:31:58,365 basehttp "GET /dataset/21 HTTP/1.1" 200 1910
+WARNING 2019-05-01 14:31:58,463 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:31:58,556 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:31:58,624 log Not Found: /favicon.ico
+WARNING 2019-05-01 14:31:58,625 basehttp "GET /favicon.ico HTTP/1.1" 404 3488
+INFO 2019-05-01 14:32:39,272 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:32:39,881 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 14:32:41,113 basehttp "GET /dataset/21 HTTP/1.1" 200 2063
+WARNING 2019-05-01 14:32:41,263 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:32:41,378 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:33:08,681 basehttp "GET /dataset/ HTTP/1.1" 200 1729
+WARNING 2019-05-01 14:33:08,807 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:33:08,864 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:33:49,194 basehttp "GET /dataset/21 HTTP/1.1" 200 2063
+WARNING 2019-05-01 14:33:49,347 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:33:49,416 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:33:53,044 views user (root) want to update dataset (valid)
+INFO 2019-05-01 14:33:53,168 basehttp "GET /dataset/21/update HTTP/1.1" 200 2027
+WARNING 2019-05-01 14:33:53,312 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:33:53,377 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:33:58,353 log Not Found: /dataset/21/datasets/cryptowat_btcusd_lmyNrq4.csv
+WARNING 2019-05-01 14:33:58,353 basehttp "GET /dataset/21/datasets/cryptowat_btcusd_lmyNrq4.csv HTTP/1.1" 404 3599
+INFO 2019-05-01 14:34:32,383 basehttp "GET /dataset/ HTTP/1.1" 200 1729
+WARNING 2019-05-01 14:34:32,518 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:34:32,566 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:34:33,902 basehttp "GET /dataset/21 HTTP/1.1" 200 2063
+WARNING 2019-05-01 14:34:34,034 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:34:34,110 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:35:05,600 basehttp "GET /dataset/ HTTP/1.1" 200 1729
+WARNING 2019-05-01 14:35:05,752 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:35:05,810 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:36:26,305 basehttp "GET /dataset/ HTTP/1.1" 200 1732
+WARNING 2019-05-01 14:36:26,428 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 14:36:26,545 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 14:41:09,634 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 14:41:10,385 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:48:11,780 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:48:17,031 basehttp "GET /admin/ignis/dataset/ HTTP/1.1" 200 4777
+INFO 2019-05-01 15:48:17,372 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:48:17,417 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO 2019-05-01 15:48:17,433 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO 2019-05-01 15:48:17,449 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+INFO 2019-05-01 15:48:17,517 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+INFO 2019-05-01 15:48:17,518 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,528 basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2019-05-01 15:48:17,531 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,536 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,538 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,540 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,544 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,557 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:17,787 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+WARNING 2019-05-01 15:48:18,012 log Not Found: /favicon.ico
+WARNING 2019-05-01 15:48:18,012 basehttp "GET /favicon.ico HTTP/1.1" 404 3488
+INFO 2019-05-01 15:48:20,395 basehttp "GET /admin/ignis/ HTTP/1.1" 200 2432
+INFO 2019-05-01 15:48:20,523 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:20,723 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO 2019-05-01 15:48:20,794 basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:20,921 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2019-05-01 15:48:20,922 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2019-05-01 15:48:36,894 autoreload /home/maus/bsuir/kp/mysite/ignis/admin.py changed, reloading.
+INFO 2019-05-01 15:48:41,862 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:48:43,891 basehttp "GET /admin/ignis/ HTTP/1.1" 200 2841
+INFO 2019-05-01 15:48:44,045 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:44,046 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:44,046 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:44,138 basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:44,300 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:44,302 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:47,201 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 3136
+INFO 2019-05-01 15:48:47,328 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:47,363 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:48:49,825 basehttp "GET /admin/ignis/nn/add/ HTTP/1.1" 200 5645
+INFO 2019-05-01 15:48:50,018 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:48:50,026 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+INFO 2019-05-01 15:48:50,031 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+INFO 2019-05-01 15:48:50,139 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20274
+INFO 2019-05-01 15:48:50,153 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO 2019-05-01 15:48:50,154 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO 2019-05-01 15:48:50,164 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO 2019-05-01 15:48:50,404 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2019-05-01 15:48:50,407 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2019-05-01 15:48:55,886 basehttp "POST /admin/ignis/nn/add/ HTTP/1.1" 302 0
+INFO 2019-05-01 15:48:56,020 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 4469
+INFO 2019-05-01 15:48:56,186 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:48:56,335 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2019-05-01 15:48:59,761 basehttp "GET /admin/ignis/nn/add/ HTTP/1.1" 200 5645
+INFO 2019-05-01 15:48:59,905 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:48:59,919 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:49:00,210 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2019-05-01 15:49:03,964 basehttp "POST /admin/ignis/nn/add/ HTTP/1.1" 200 5801
+INFO 2019-05-01 15:49:04,101 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:49:04,352 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:21,960 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 15:49:33,324 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:49:38,268 basehttp "POST /admin/ignis/nn/add/ HTTP/1.1" 302 0
+INFO 2019-05-01 15:49:38,378 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 4691
+INFO 2019-05-01 15:49:38,537 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,538 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,543 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,548 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,549 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,552 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,555 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,559 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:49:38,562 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,567 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,567 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,568 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,622 basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,757 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2019-05-01 15:49:38,776 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2019-05-01 15:49:40,558 basehttp "GET /admin/ignis/nn/2/change/ HTTP/1.1" 200 5861
+INFO 2019-05-01 15:49:40,721 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:49:41,771 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 4513
+INFO 2019-05-01 15:49:43,354 basehttp "GET /admin/ignis/nn/1/change/ HTTP/1.1" 200 5861
+INFO 2019-05-01 15:49:43,513 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 15:49:44,474 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 4513
+INFO 2019-05-01 15:50:04,901 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 15:50:06,242 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:50:28,336 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 15:50:28,967 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:50:35,435 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 15:50:36,042 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:50:59,186 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 15:50:59,800 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:55:24,555 autoreload /home/maus/bsuir/kp/mysite/ignis/urls.py changed, reloading.
+INFO 2019-05-01 15:55:25,315 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:55:45,405 autoreload /home/maus/bsuir/kp/mysite/ignis/urls.py changed, reloading.
+INFO 2019-05-01 15:55:46,081 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:56:30,212 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:56:30,896 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:56:33,186 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:56:33,932 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:56:38,306 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:56:39,079 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:56:51,788 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:56:52,493 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:56:54,825 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:56:55,521 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:56:57,793 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:56:58,624 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:57:05,036 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:57:05,703 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:57:13,165 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:57:13,834 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:57:21,319 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:57:22,012 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:57:28,435 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:57:29,198 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:57:34,570 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:57:35,248 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:57:55,286 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 15:57:55,961 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:10,751 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:11,403 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:13,691 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:14,453 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:18,787 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:19,461 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:24,858 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:25,732 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:30,060 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:30,754 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:33,020 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:33,672 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:58:50,534 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:58:51,439 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:59:24,150 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:59:24,847 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:59:47,981 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:59:48,687 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 15:59:54,073 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 15:59:54,794 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:03,341 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:04,021 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:05,244 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:05,930 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:09,221 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:09,896 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:11,139 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:11,918 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:15,275 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:16,008 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:18,319 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:19,128 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:20,403 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:21,075 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:23,371 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:24,331 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:29,700 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:30,543 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:39,144 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:39,841 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:44,183 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:44,819 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:48,137 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:48,801 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:00:52,088 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:00:52,741 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:01:06,470 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:01:07,212 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:05:36,384 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 16:05:37,896 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:07:52,342 autoreload /home/maus/bsuir/kp/mysite/ignis/forms.py changed, reloading.
+INFO 2019-05-01 16:07:53,480 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:08:46,762 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 16:08:47,391 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 16:09:43,837 log Internal Server Error: /admin/ignis/nn/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column ignis_nn.name does not exist
+LINE 1: SELECT "ignis_nn"."id", "ignis_nn"."name", "ignis_nn"."date"...
+                                ^
+HINT:  Perhaps you meant to reference the column "ignis_nn.date".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1698, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1397, in response_action
+    response = func(self, request, queryset)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/actions.py", line 28, in delete_selected
+    deletable_objects, model_count, perms_needed, protected = modeladmin.get_deleted_objects(queryset, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1820, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 112, in get_deleted_objects
+    obj = objs[0]
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 308, in __getitem__
+    qs._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column ignis_nn.name does not exist
+LINE 1: SELECT "ignis_nn"."id", "ignis_nn"."name", "ignis_nn"."date"...
+                                ^
+HINT:  Perhaps you meant to reference the column "ignis_nn.date".
+
+ERROR 2019-05-01 16:09:43,847 basehttp "POST /admin/ignis/nn/ HTTP/1.1" 500 180744
+INFO 2019-05-01 16:09:59,978 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 16:10:04,223 log Internal Server Error: /admin/ignis/nn/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column ignis_nn.name does not exist
+LINE 1: SELECT "ignis_nn"."id", "ignis_nn"."name", "ignis_nn"."date"...
+                                ^
+HINT:  Perhaps you meant to reference the column "ignis_nn.date".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1698, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1397, in response_action
+    response = func(self, request, queryset)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/actions.py", line 28, in delete_selected
+    deletable_objects, model_count, perms_needed, protected = modeladmin.get_deleted_objects(queryset, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1820, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 112, in get_deleted_objects
+    obj = objs[0]
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 308, in __getitem__
+    qs._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column ignis_nn.name does not exist
+LINE 1: SELECT "ignis_nn"."id", "ignis_nn"."name", "ignis_nn"."date"...
+                                ^
+HINT:  Perhaps you meant to reference the column "ignis_nn.date".
+
+ERROR 2019-05-01 16:10:04,225 basehttp "POST /admin/ignis/nn/ HTTP/1.1" 500 180880
+INFO 2019-05-01 16:15:55,714 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:16:04,446 basehttp "GET /admin/ HTTP/1.1" 200 6647
+INFO 2019-05-01 16:16:05,316 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2019-05-01 16:16:05,545 basehttp "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2019-05-01 16:16:05,546 basehttp "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2019-05-01 16:16:05,553 basehttp "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+ERROR 2019-05-01 16:16:08,365 log Internal Server Error: /admin/ignis/nn/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "ignis_nn" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "ignis_nn"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1672, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/options.py", line 744, in get_changelist_instance
+    sortable_by,
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/views/main.py", line 82, in __init__
+    self.get_results(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/contrib/admin/views/main.py", line 210, in get_results
+    result_count = paginator.count
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "ignis_nn" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "ignis_nn"
+                                          ^
+
+ERROR 2019-05-01 16:16:08,368 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 500 178166
+INFO 2019-05-01 16:17:43,840 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:17:49,416 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 302 0
+INFO 2019-05-01 16:17:49,883 basehttp "GET /admin/login/?next=/admin/ignis/nn/ HTTP/1.1" 200 1837
+INFO 2019-05-01 16:17:50,510 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2019-05-01 16:17:50,511 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2019-05-01 16:17:50,531 basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2019-05-01 16:17:50,546 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+INFO 2019-05-01 16:17:56,860 basehttp "POST /admin/login/?next=/admin/ignis/nn/ HTTP/1.1" 200 1997
+INFO 2019-05-01 16:17:57,012 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2019-05-01 16:17:57,089 basehttp "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 8192
+INFO 2019-05-01 16:17:57,099 basehttp "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 8192
+INFO 2019-05-01 16:17:57,100 basehttp "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 8192
+INFO 2019-05-01 16:18:14,063 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:18:17,655 basehttp "POST /admin/login/?next=/admin/ignis/nn/ HTTP/1.1" 302 0
+INFO 2019-05-01 16:18:17,768 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 3136
+INFO 2019-05-01 16:18:18,038 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 16:18:18,330 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2019-05-01 16:18:23,432 basehttp "GET /admin/ignis/nn/add/ HTTP/1.1" 200 7972
+INFO 2019-05-01 16:18:23,572 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 16:18:23,944 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2019-05-01 16:18:29,466 basehttp "GET /admin/ignis/dataset/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5965
+INFO 2019-05-01 16:18:29,606 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 16:18:46,596 basehttp "POST /admin/ignis/dataset/add/?_to_field=id&_popup=1 HTTP/1.1" 200 359
+INFO 2019-05-01 16:18:47,019 basehttp "GET /static/admin/js/popup_response.js HTTP/1.1" 200 569
+INFO 2019-05-01 16:18:56,444 basehttp "POST /admin/ignis/nn/add/ HTTP/1.1" 200 8171
+INFO 2019-05-01 16:18:56,629 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 16:19:08,569 basehttp "POST /admin/ignis/nn/add/ HTTP/1.1" 302 0
+INFO 2019-05-01 16:19:08,672 basehttp "GET /admin/ignis/nn/ HTTP/1.1" 200 4451
+INFO 2019-05-01 16:19:08,883 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO 2019-05-01 16:19:09,008 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2019-05-01 16:19:09,039 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2019-05-01 16:19:12,632 basehttp "GET /dataset/ HTTP/1.1" 200 1516
+WARNING 2019-05-01 16:19:13,914 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:19:14,726 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 16:19:18,842 basehttp "GET /nn/ HTTP/1.1" 200 1508
+WARNING 2019-05-01 16:19:18,948 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:19:19,090 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+ERROR 2019-05-01 16:21:47,575 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 63, in meta_data
+    resolver = NNResolver(self.file)
+AttributeError: 'NN' object has no attribute 'file'
+ERROR 2019-05-01 16:21:47,576 basehttp "GET /nn/1 HTTP/1.1" 500 89403
+INFO 2019-05-01 16:24:48,196 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 16:24:58,652 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 16:25:01,042 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 178, in get_context_data
+    meta_data = dataset.meta_data()
+  File "/home/maus/bsuir/kp/mysite/ignis/models.py", line 64, in meta_data
+    return resolver.get_meta_data()
+AttributeError: 'NNResolver' object has no attribute 'get_meta_data'
+ERROR 2019-05-01 16:25:01,043 basehttp "GET /nn/1 HTTP/1.1" 500 89529
+INFO 2019-05-01 16:25:46,992 autoreload /home/maus/bsuir/kp/mysite/engine/tool.py changed, reloading.
+INFO 2019-05-01 16:25:47,618 autoreload Watching for file changes with StatReloader
+ERROR 2019-05-01 16:25:49,884 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 180, in get_context_data
+    if meta_data["valid"]:
+TypeError: 'NoneType' object is not subscriptable
+ERROR 2019-05-01 16:25:49,885 basehttp "GET /nn/1 HTTP/1.1" 500 87066
+ERROR 2019-05-01 16:25:53,119 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 180, in get_context_data
+    if meta_data["valid"]:
+TypeError: 'NoneType' object is not subscriptable
+ERROR 2019-05-01 16:25:53,121 basehttp "GET /nn/1 HTTP/1.1" 500 87066
+ERROR 2019-05-01 16:25:55,204 log Internal Server Error: /nn/1
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/kp-3crlKS4c/lib/python3.7/site-packages/django/views/generic/detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "/home/maus/bsuir/kp/mysite/ignis/views.py", line 180, in get_context_data
+    if meta_data["valid"]:
+TypeError: 'NoneType' object is not subscriptable
+ERROR 2019-05-01 16:25:55,204 basehttp "GET /nn/1 HTTP/1.1" 500 87066
+INFO 2019-05-01 16:26:12,972 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:26:14,472 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:27:47,887 basehttp "GET /nn/1 HTTP/1.1" 200 1601
+WARNING 2019-05-01 16:27:48,003 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:27:48,247 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 16:28:58,271 basehttp "GET /nn/1 HTTP/1.1" 200 1668
+WARNING 2019-05-01 16:28:58,402 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:28:58,499 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 16:29:48,447 autoreload /home/maus/bsuir/kp/mysite/ignis/models.py changed, reloading.
+INFO 2019-05-01 16:29:49,110 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:30:34,526 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:30:39,162 basehttp "GET /nn/1 HTTP/1.1" 200 1668
+WARNING 2019-05-01 16:30:39,284 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:30:39,384 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 16:30:43,567 views user (root) want to update nn (test)
+INFO 2019-05-01 16:30:43,753 basehttp "GET /nn/1/update HTTP/1.1" 200 2130
+WARNING 2019-05-01 16:30:43,872 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:30:43,941 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+INFO 2019-05-01 16:31:11,253 autoreload /home/maus/bsuir/kp/mysite/ignis/views.py changed, reloading.
+INFO 2019-05-01 16:31:11,857 autoreload Watching for file changes with StatReloader
+INFO 2019-05-01 16:31:13,800 views user (root) want to update nn (test)
+INFO 2019-05-01 16:31:13,860 basehttp "GET /nn/1/update HTTP/1.1" 200 2298
+WARNING 2019-05-01 16:31:13,964 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767
+WARNING 2019-05-01 16:31:14,047 basehttp "GET /static/css/styles.css HTTP/1.1" 404 1767

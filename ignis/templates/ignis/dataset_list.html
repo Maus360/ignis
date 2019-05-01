@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>All datasets</h1>
+{% if user.is_authenticated %}
+<a href="{% url 'dataset-create' %}">Upload</a></p>
+{%endif%}
+{% if dataset_list %}
+<ul>
+
+    {% for dataset in dataset_list %}
+    {% if dataset.sharing or dataset.owner == user %}
+    <li>
+        <a href="{{ dataset.get_absolute_url }}">{{ dataset.name }}</a> ({{dataset.date}}) — {{ dataset.owner }}
+    </li>
+    {% endif %}
+    {% endfor %}
+
+</ul>
+
+{% else %}
+<p>There are no blogs.</p>
+{% endif %}
+{% endblock %}
