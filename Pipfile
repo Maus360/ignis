@@ -11,6 +11,9 @@ pylint = "*"
 django = "*"
 psycopg2-binary = "*"
 pandas = "*"
+keras = "*"
+numpy = "*"
+tensorflow = "*"
 
 [requires]
 python_version = "3.7"
