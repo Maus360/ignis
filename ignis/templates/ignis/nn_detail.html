@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<h1>Nueral network {{ nn.name }}</h1>
+<h1>Neural network {{ nn.name }}</h1>
 {% if user == nn.owner %}
 <a href="{% url 'nn-delete' nn.id %}">Delete </a>
-<a href="{% url 'nn-update' nn.id %}">Update </a>
 {% endif %}
 <p><strong>Post date:</strong> {{ nn.date }}</p>
 <p><strong>Owner:</strong> {{ nn.owner }}</p>
 <p><strong>Dataset:</strong> <a href="{% url 'dataset-detail' nn.dataset.id %}"> {{ nn.dataset }} </a></p>
-<p><strong>Result:</strong> {{ result }}</p>
+<a href="{% url 'download' nn.id %}">Download</a>
+<p><strong>Result:</strong> {{ result|linebreaks }}</p>
 
 
 <!-- <p><strong>Description:</strong></p>

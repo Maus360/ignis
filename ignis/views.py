@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views import generic
+from django.views import generic, View
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.utils.encoding import smart_str
+from wsgiref.util import FileWrapper
+
 from datetime import datetime
 import logging
 
@@ -170,13 +173,18 @@ class NNDetailView(generic.DetailView):
 
     model = NN
 
+    def get_queryset(self):
+        id_ = self.kwargs["pk"]
+        self.queryset = NN.objects.filter(pk=id_)
+        return self.queryset
+
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
-        dataset = self.get_queryset().first()
-        meta_data = dataset.meta_data()
-        context["result"] = meta_data[0].decode("utf-8")
+        nn = self.get_queryset().first()
+        meta_data = nn.meta_data()
+        context["result"] = "\n".join([item.decode("utf-8") for item in meta_data])
         # print(meta_data)
         # if meta_data["valid"]:
         #     for key, value in meta_data.items():
@@ -274,3 +282,21 @@ class NNCreateView(generic.CreateView):
         form.instance.owner = user
         form.instance.date = datetime.today()
         return super().form_valid(form)
+
+
+class DownloadView(View):
+    def get(request, *args, **kwargs):
+        result = NN.objects.filter(pk=kwargs["pk"]).first()
+        name = str(result) + str(int(datetime.timestamp(result.date)))
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+            f"sandboxes/{name}/result.txt",
+        )
+        with open(file_path, "rb") as output:
+            wrapper = FileWrapper(output)
+            response = HttpResponse(wrapper, content_type="application/force-download")
+            response["Content-Desposition"] = "attachment; filename=result.txt"
+            response["Content-Length"] = os.path.getsize(file_path)
+            response["X_Sendfile"] = file_path
+            print("get", request, args, kwargs)
+            return response

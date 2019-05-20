@@ -16,11 +16,11 @@ urlpatterns = [
         login_required(views.DatasetDeleteView.as_view()),
         name="dataset-delete",
     ),
-    path(
-        "dataset/<int:pk>/update",
-        login_required(views.DatasetUpdateView.as_view()),
-        name="dataset-update",
-    ),
+    # path(
+    #     "dataset/<int:pk>/update",
+    #     login_required(views.DatasetUpdateView.as_view()),
+    #     name="dataset-update",
+    # ),
     path("nn/", views.NNListView.as_view(), name="nn-list"),
     path("nn/create", login_required(views.NNCreateView.as_view()), name="nn-create"),
     path("nn/<int:pk>", views.NNDetailView.as_view(), name="nn-detail"),
@@ -29,10 +29,11 @@ urlpatterns = [
         login_required(views.NNDeleteView.as_view()),
         name="nn-delete",
     ),
-    path(
-        "nn/<int:pk>/update",
-        login_required(views.NNUpdateView.as_view()),
-        name="nn-update",
-    ),
+    # path(
+    #     "nn/<int:pk>/update",
+    #     login_required(views.NNUpdateView.as_view()),
+    #     name="nn-update",
+    # ),
+    path("download/<int:pk>", views.DownloadView.as_view(), name="download"),
     path("signup/", views.SignUpView.as_view(), name="signup"),
 ]

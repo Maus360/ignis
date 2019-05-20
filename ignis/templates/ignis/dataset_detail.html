@@ -5,7 +5,6 @@
 <h1>Dataset {{ dataset.name }}</h1>
 {% if user == dataset.owner %}
 <a href="{% url 'dataset-delete' dataset.id %}">Delete </a>
-<a href="{% url 'dataset-update' dataset.id %}">Update </a>
 {% endif %}
 <p><strong>Post date:</strong> {{ dataset.date }}</p>
 <p><strong>Owner:</strong> {{ dataset.owner }}</p>

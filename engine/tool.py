@@ -1,6 +1,8 @@
 import os
+import shutil
 import logging
 import pandas as pd
+import numpy
 import subprocess
 import pwd
 import subprocess
@@ -55,14 +57,29 @@ class DatasetResolver(object):
 class NNResolver(object):
     def __init__(self, nn):
         self.nn = nn
-        self.name = str(self.nn) + str(datetime.timestamp(self.nn.date))
+        self.name = str(self.nn) + str(int(datetime.timestamp(self.nn.date)))
         self.filename = self.name + ".py"
+        self.dataset = self.nn.dataset
+        self.output_file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+            "sandboxes",
+            self.name,
+            "result.txt",
+        )
 
     def get_meta_data(self):
-        self.prepare_sandbox()
-        result = self.run()
+        if not os.path.exists(
+            os.path.join(
+                os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+                "sandboxes",
+                self.name,
+            )
+        ):
+            self.prepare_sandbox()
+            result = self.run()
         with open(self.output_file_path, "rb") as out:
-            return out.readlines()
+            a = out.readlines()
+            return a
 
     def prepare_sandbox(self):
         try:
@@ -74,6 +91,26 @@ class NNResolver(object):
                 ),
                 exist_ok=True,
             )
+            os.makedirs(
+                os.path.join(
+                    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+                    "sandboxes/",
+                    self.name,
+                    "data/",
+                ),
+                exist_ok=True,
+            )
+            shutil.copyfile(
+                self.dataset.file.name,
+                os.path.join(
+                    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
+                    "sandboxes/",
+                    self.name,
+                    "data/",
+                    self.dataset.name,
+                ),
+            )
+
             with open(
                 os.path.join(
                     os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
@@ -83,42 +120,27 @@ class NNResolver(object):
                 ),
                 "w",
             ) as output:
-                output.write(self.nn.code)
+                output.write(
+                    "import os; import sys;"
+                    "import pandas as pd;"
+                    "data = pd.read_csv(os.path.join("
+                    "os.path.dirname(os.path.dirname(os.path.realpath(__file__))),"
+                    f"'{self.name}',"
+                    "'data/',"
+                    f"'{self.dataset.name}'))\n" + self.nn.code
+                )
         except Exception as e:
             logger.exception("error")
-        print(self.nn.code)
 
     def run(self):
-        # python_home = "/home/maus/.local/share/virtualenvs/kp-3crlKS4c"
-        # activate_this = python_home + "/bin/activate_this.py"
-        # exec(
-        #     compile(open(activate_this, "rb").read(), activate_this, "exec"),
-        #     dict(__file__=activate_this),
-        # )
-        command = "python " + os.path.join(
-            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
-            "sandboxes",
-            self.name,
-            self.filename,
-        )
-        print(command)
-        self.output_file_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
-            "sandboxes",
-            self.name,
-            "result.txt",
-        )
         if os.path.exists(self.output_file_path):
             os.utime(self.output_file_path, None)
         else:
             open(self.output_file_path, "a").close()
         with open(self.output_file_path, "w") as output:
-            process = subprocess.Popen(
-                "sudo -u kp " + command,
-                shell=True,
-                stdin=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                stdout=output,
-            )
-            process.wait()
-            print("result")
+            print(f"from sandboxes.{self.name}.{self.name} import result")
+            try:
+                exec(f"from sandboxes.{self.name}.{self.name} import result")
+                output.write(str(locals()["result"]))
+            except Exception as e:
+                logger.exception(e)

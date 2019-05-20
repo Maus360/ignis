@@ -3,7 +3,7 @@
 
 <head>
 
-    {% block title %}<title>Pascal Blog</title>{% endblock %}
+    {% block title %}<title>Ignis</title>{% endblock %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,6 +25,7 @@
                 <ul class="sidebar-nav">
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="{% url 'dataset-list' %}">All datasets</a></li>
+                    <li><a href="{% url 'nn-list' %}">All neuron networks</a></li>
                 </ul>
 
                 <ul class="sidebar-nav">
